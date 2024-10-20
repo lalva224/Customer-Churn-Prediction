@@ -8,7 +8,7 @@ import utils as ut
 #use other api providers through 1 simple interface
 client = OpenAI(
   base_url = 'https://api.groq.com/openai/v1',
-  api_key = st.secrets['GROQ_KEY']
+  api_key = os.getenv('GROQ_KEY')
 )
 def load_model(filename):
   with open(filename,'rb') as file:
